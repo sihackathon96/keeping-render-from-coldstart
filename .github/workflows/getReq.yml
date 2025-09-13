@@ -14,3 +14,4 @@ jobs:
         run: |
           echo "Running GET request..."
           curl -X https://swasthya-mitra-frontend-qith.onrender.com/
+          curl -X https://sih-telemedicine-backend.onrender.com/api/
