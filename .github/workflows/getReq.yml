@@ -1,0 +1,16 @@
+name: GET Request Cron Job
+
+# Trigger every 7 minutes
+on:
+  schedule:
+    - cron: '*/7 * * * *'   # every 7 minutes (UTC)
+  workflow_dispatch:         # optional manual trigger
+
+jobs:
+  send-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send GET request
+        run: |
+          echo "Running GET request..."
+          curl -X GET https://sih-telemedicine-dnof.onrender.com/api
